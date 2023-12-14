@@ -1,0 +1,63 @@
+body {
+    font-family: 'Didot', serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #e9a0e341; /* Color de fondo suave */
+    color: #333; /* Color del texto principal */
+}
+
+.carta {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Color de fondo del contenedor */
+    position: relative;
+    overflow: hidden;
+}
+
+.carta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 20px dotted #f51e9faa; /* Ancho del borde y color */
+    border-radius: 8px;
+    animation: borderAnimation 5s infinite alternate; /* Animación del borde */
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #f51e9faa; /* Color inicial */
+    }
+    100% {
+        border-color: #6e45e2aa; /* Color final */
+    }
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f51e9f; /* Color destacado para el encabezado */
+}
+
+.cuerpo {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.despedida {
+    text-align: center;
+    font-style: italic;
+    color: #555; /* Color de texto gris oscuro */
+}
+
+img {
+    display: block;
+    margin: 20px auto; /* Centrar la imagen */
+    max-width: 100%;
+    height: auto;
+}
